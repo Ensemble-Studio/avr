@@ -1,192 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel=“stylesheet” type=“text/css” href="css/test.css">
-     <link rel="stylesheet" href="css/test.css">
-     
-
-     <link rel="preconnect" href="https://fonts.gstatic.com"> 
-<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-
-
-    
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
-<script src="js/app.js" defer></script>
-
-     <title>Alexandra Van Rijckevorsel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login-page.css">
+  <script defer src="login-page.js"></script>
 </head>
-<body id="front-page">
 
-<div id="app">
-     <div id="fullLogo">
-          <img src="images/Logo_Full.svg" alt="avr full logo">
-     </div>
-
-     <div id="header-logo_mob">
-          <img id="avrIcon-mob" src="images/Icon_white.png" alt="logo-avr">
-      </div>
-     
-     <header id="headerSmall">
-<div class="header-logo">
-<img id="avrIcon" src="images/Icon_white.png" alt="logo-avr">
-</div>
-<div id="header-phrase">
-     <span>premium gems & jewels</span>
-     <span>custom made designs</span>
-     <span>renowned craftsmanship</span>
-</div>
-<div id="header-menu">
-     <ul>
-          <li> <a class="cta--menu" href="#" >Home</a> </li>
-          <li><a class="cta--menu" href="/designs.html">Designs</a></li>
-          <li><a class="cta--menu" href="/process.html">Process</a></li>
-          <li><a class="cta--menu" href="/about.html">About</a></li>
-
-     </ul>
-</div>
-     </header>
-
-  
-     <main>
-<div class="topbanner">
-    <div class="usp">
-         <span class="tline">custom <b>made</b></span>
-     <span class="bline">fine jewellery</span>
-
-</div>
-
-</div>
-
-            <section id="collapse" class="collapse">
-
-
-
-
-              <div class="left-50">
-
-               <!-- Text input -->
-                   <div class="text-block">
-                  <div class="titleblock" >
-                       <span class="subline">High Quality</span>
-                       <span class="title">Materials</span>
-                    </div>
-
-                  <p2> Finding the right stones is prime. Alexandra works with supplier from India to Antwerp, to find the right one for your design. </p2>
-
-                 <a class="cta" href="#" > Show Materials </a> 
-                  
-                       </div></div>
-               
-              
-              <div class="right-50">
-               <img src="images/AVR_RING_retouch 13.jpg" alt="high qualtiy materials">
-              </div>
-          
-            </section>
-          
-            <section id="collapse02" class="collapse">
-               <div class="left-50">
-                  
-                    <img src="images/HP_s-designs.jpg" alt="Custom made designs">
-               </div>
-               <div class="right-50">
-                       <!-- Text input -->
-                       <div class="text-block">
-                         <div class="titleblock" >
-                              <span class="subline">custom made</span>
-                              <span class="title">
-                                   Designs</span>
-       
-                         </div>
-       
-                         <p2>
-                              Finding the right stones is prime. Alexandra van Rijckevorsel has access all over the world to find the right stone for your design.  
-                         </p2>
-      
-                         <a class="cta" href="#" > Show Designs</a> 
-                                             
-                       
-
-
-
-               </div></div>
-           
-            </section>
-          
-            <section id="collapse03" class="collapse">
-               <div class="left-50">
-
-                     <!-- Text input -->
-                     <div class="text-block">
-                         <div class="titleblock">
-                              <span class="subline">renowned
-                              </span>
-                              <span class="title">crafts</span>
-                         </div>
-       
-                         <p2>
-                              Finding the right stones is prime. Alexandra van Rijckevorsel has access all over the world to find the right stone for your design.  
-                         </p2>
-       
-                         <a class="cta" href="#" >Show Process</a> 
-                         
-
-
-               </div></div>
-               <div class="right-50">
-                    <img src="images/HP_srafts.jpg" alt="the atelier">
-               </div>
-           
-            </section>
-            
-          <section id="aboutblurb">
-
-               <div class="imagebox">
-                    <img src="images/HP_br.jpg">
-     
-                    
-               </div>
-
-
-             <div class="textbox"> 
-              <span class="subheader"><h3>Contact</h3></span> 
-              <span class="content">
-                   <p1>Plan an intake with Alexandra to discuss your custom made piece.</p1><br> 
-          </span>
-          <p><a class="cta" href="#">Get In Touch</a></p>
-          </div>
-
-          
-          </section>
-
-
-          <footer>
-               <div><p1>
-                    Alexandra van Rijckevorsel<br><br>
-                    
-                    <a href="https://www.instagram.com/alexandravanrijckevorsel" target="blank">Instagram</a>
-                    <a href="mailto:info@alexandravanrijckevorsel.com" target="blank">Email</a>
-
-
-               </p1></div>
-
-               <div><p1>
-                    Amsterdam, the Netherlands<br><br>
-                    +31 611255530
-               </p1></div>
-
-          </footer>
-          </div>
-          </main>
-
-     </div>
+<body>
+  <main id="main-holder">
+    <h1 id="login-header">Login</h1>
     
-     <script src="src/index.js"></script>
-
-
+    <div id="login-error-msg-holder">
+      <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+    </div>
+    
+    <form id="login-form">
+      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+      <input type="submit" value="Login" id="login-form-submit">
+    </form>
+  
+  </main>
 </body>
+
+<style>
+     html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #3a3a3a;
+}
+
+#main-holder {
+  width: 50%;
+  height: 70%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0px 0px 5px 2px black;
+}
+
+#login-error-msg-holder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+#login-error-msg {
+  width: 23%;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #8a0000;
+  border: 1px solid #8a0000;
+  background-color: #e58f8f;
+  opacity: 0;
+}
+
+#error-msg-second-line {
+  display: block;
+}
+
+#login-form {
+  align-self: flex-start;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.login-form-field::placeholder {
+  color: #3a3a3a;
+}
+
+.login-form-field {
+  border: none;
+  border-bottom: 1px solid #3a3a3a;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  outline: none;
+  padding: 0px 0px 5px 5px;
+}
+
+#login-form-submit {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #3a3a3a;
+  cursor: pointer;
+  outline: none;
+}
+</style>
+
+<script>
+     const loginForm = document.getElementById("login-form");
+const loginButton = document.getElementById("login-form-submit");
+const loginErrorMsg = document.getElementById("login-error-msg");
+
+loginButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    const username = loginForm.username.value;
+    const password = loginForm.password.value;
+
+    if (username === "user" && password === "avr") {
+        window.open("https://ensemble-studio.github.io/avr/index.html")
+    } else {
+        loginErrorMsg.style.opacity = 1;
+    }
+})
+</script>
 
 </html>
