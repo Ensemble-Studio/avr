@@ -5,7 +5,7 @@
   font-family: 'Saudagar Regular';
   font-style: normal;
   font-weight: normal;
-  src: local("Saudagar Regular"), url("/fonts/saudagar-cufonfonts-webfont/") format("woff");
+  src: local("Saudagar Regular"), url("/avr/fonts/saudagar-cufonfonts-webfont/") format("woff");
 }
 
 h1 {
