@@ -10,7 +10,7 @@
 
 <body>
   <main id="main-holder">
-    <h1 id="login-header">Login</h1>
+   
     
     <div id="login-error-msg-holder">
       <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
@@ -37,7 +37,14 @@ body {
   display: grid;
   justify-items: center;
   align-items: center;
-  background-color: #3a3a3a;
+  background-color: #fff;
+}
+
+h1 {
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: 200;
+     max-width: 300px;
+     font-size: 15px;
 }
 
 #main-holder {
@@ -48,7 +55,7 @@ body {
   align-items: center;
   background-color: white;
   border-radius: 7px;
-  box-shadow: 0px 0px 5px 2px black;
+  box-shadow: 0px 0px 5px 2px #f2f2f2;
 }
 
 #login-error-msg-holder {
@@ -103,7 +110,7 @@ body {
   border-radius: 5px;
   color: white;
   font-weight: bold;
-  background-color: #3a3a3a;
+  background-color: #947171;
   cursor: pointer;
   outline: none;
 }
@@ -119,7 +126,7 @@ loginButton.addEventListener("click", (e) => {
     const username = loginForm.username.value;
     const password = loginForm.password.value;
 
-    if (username === "user" && password === "avr") {
+    if (username === "avr" && password === "ensstu") {
         window.open("https://ensemble-studio.github.io/avr/hello.html")
     } else {
         loginErrorMsg.style.opacity = 1;
