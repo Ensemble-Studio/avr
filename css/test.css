@@ -33,7 +33,7 @@ h3 {
   font-family: "Inter", sans-serif;
   font-size: 24px;
   letter-spacing: 0.2em;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 @media (min-width: 0px) and (max-width: 640px) {
