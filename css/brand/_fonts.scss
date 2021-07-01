@@ -8,13 +8,13 @@
   font-weight: normal;
   src: local('Saudagar Regular'),
     url('/avr/fonts/saudagar-cufonfonts-webfont/Saudagar.woff') format('woff');
-
-  $serif: 'Saudagar Regular';
-  $sans-serif: 'Inter', sans-serif;
 }
 
+$serif: 'Saudagar Regular', serif;
+$sans-serif: 'Inter', sans-serif;
+
 h1 {
-  font-family: $serif;
+  font-family: 'Saudagar Regular';
   font-size: 120px;
 
   @media (min-width: 0px) and (max-width: 640px) {
