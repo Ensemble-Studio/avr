@@ -260,10 +260,11 @@ arrow.style.borderBottom = '0px';
 links.forEach(link => {
 
      link.addEventListener('mouseenter', function () {
-          arrow.innerHTML = '->';
+          arrow.innerHTML = '&rarr;';
           link.appendChild(arrow);
           link.style.display = 'flex';
           arrow.style.alignSelf = 'center';
+          arrow.style.placeSelf = 'center';
           link.style.textDecoration = 'none';
 
      })
