@@ -63,7 +63,7 @@ else {
 function changeHeader() {
 
      //design page
-     if (window.location.pathname === '/designs.html') {
+     if (window.location.pathname === 'designs.html') {
           if (document.body.getBoundingClientRect().top <= -50) //  displayed when scrolled
           {
                fullLogo.style.display = 'none';
