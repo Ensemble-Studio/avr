@@ -9,7 +9,9 @@
 }
 
 h1 {
-  font-family: 'Saudagar Regular';
+  font-family: "Saudagar Regular", serif;
+  font-style: normal;
+  font-weight: normal;
   font-size: 120px;
 }
 
@@ -20,7 +22,9 @@ h1 {
 }
 
 h2 {
-  font-family: 'Saudagar Regular';
+  font-family: "Saudagar Regular", serif;
+  font-style: normal;
+  font-weight: normal;
   font-size: 80px;
   line-height: 1em;
   text-transform: uppercase;

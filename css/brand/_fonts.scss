@@ -14,7 +14,9 @@ $serif: 'Saudagar Regular', serif;
 $sans-serif: 'Inter', sans-serif;
 
 h1 {
-  font-family: 'Saudagar Regular';
+  font-family: $serif;
+  font-style: normal;
+  font-weight: normal;
   font-size: 120px;
 
   @media (min-width: 0px) and (max-width: 640px) {
@@ -23,11 +25,14 @@ h1 {
 }
 
 h2 {
-  font-family: 'Saudagar Regular';
+  font-family: $serif;
+  font-style: normal;
+  font-weight: normal;
   font-size: 80px;
   line-height: 1em;
   text-transform: uppercase;
   margin-bottom: 0px;
+
   @media (min-width: 0px) and (max-width: 640px) {
     font-size: 50px;
   }
