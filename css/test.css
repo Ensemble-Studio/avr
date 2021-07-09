@@ -131,7 +131,7 @@ a.cta--menu {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  height: 1em;
+  height: 1.4em;
   font-size: 14px;
 }
 
