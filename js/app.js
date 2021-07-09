@@ -63,7 +63,7 @@ else {
 function changeHeader() {
 
      //design page
-     if (window.location.pathname === 'designs.html') {
+     if (window.location.pathname === '/designs.html') {
           if (document.body.getBoundingClientRect().top <= -50) //  displayed when scrolled
           {
                fullLogo.style.display = 'none';
@@ -84,6 +84,8 @@ function changeHeader() {
                     headerSmall.style.backgroundColor = '';
                     headerSmall.style.color = 'white';
                     menuTop.style.color = 'white';
+                    fullLogo.style.display = 'none';
+
                }
           }
 
@@ -106,6 +108,8 @@ function changeHeader() {
                else {
                     headerSmall.style.top = '90' + '%';
                     headerSmall.style.backgroundColor = '';
+                    fullLogo.style.display = 'none';
+
                }
 
 
