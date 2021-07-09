@@ -1,21 +1,4 @@
 
-// why use vue anyway... sigh......
-const app = new Vue({
-
-     el: '#app',
-     data: {
-          color: 'blue',
-          titleBlock: 'titleblock',
-          arrow: '->',
-          hover: false,
-          letterSpacing: 'letterspacing'
-
-     }
-
-
-
-});
-
 
 
 
@@ -63,8 +46,9 @@ else {
 function changeHeader() {
 
      //design page
-     if (window.location.pathname === '/designs.html') {
+     if (window.location.href.indexOf('designs') > -1) {
           if (document.body.getBoundingClientRect().top <= -50) //  displayed when scrolled
+
           {
                fullLogo.style.display = 'none';
                svgIcon.src = 'images/Icon_white.png';
@@ -350,3 +334,11 @@ window.onscroll = function () {
 
 };
 
+
+
+document.onload = function () {
+
+     //check url
+     var url = window.location.href;
+     console.log(url);
+}
