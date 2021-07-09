@@ -1,4 +1,3 @@
-import css from "/Users/catharina/Creative Cloud Files/ENSEMBLE/DIGITAL/avr/css";
 
 
 module.exports = {
@@ -8,6 +7,9 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
+        options: {
+          url: true,
+        },
 
       },
 
