@@ -47,70 +47,132 @@ var sdl = window.matchMedia('(max-width: 800px) and (orientation: landscape)');
 var sdp = window.matchMedia('(orientation: portrait)');
 
 
+if (sdp.matches) {
+     fullLogo.style.display = 'none';
+     headerSmall.style.top = '92' + '%';
+     headerSmall.style.transition = '0ms';
+}
+else {
+     fullLogo.style.display = '';
+     headerSmall.style.top = '';
+     headerSmall.style.transition = '';
 
+}
 // function for header change on scroll
 
 function changeHeader() {
 
-
-
-     if (document.body.getBoundingClientRect().top <= -50) //  displayed when scrolled
-     {
-          fullLogo.style.display = 'none';
-          svgIcon.src = 'images/Icon_blue.png';
-          headerSmall.style.top = '0' + 'px';
-
-
-          if (mql.matches) {
+     //design page
+     if (window.location.pathname === '/designs.html') {
+          if (document.body.getBoundingClientRect().top <= -50) //  displayed when scrolled
+          {
+               fullLogo.style.display = 'none';
+               svgIcon.src = 'images/Icon_white.png';
                headerSmall.style.top = '0' + 'px';
-               headerSmall.style.backgroundColor = '#ffffff';
-               headerSmall.style.color = 'black';
-               menuTop.style.color = 'black';
 
 
+               if (mql.matches) {
+                    headerSmall.style.top = '0' + 'px';
+                    headerSmall.style.backgroundColor = '#010118';
+                    headerSmall.style.color = 'white';
+                    menuTop.style.color = 'white';
+
+
+               }
+               else {
+                    headerSmall.style.top = '92' + '%';
+                    headerSmall.style.backgroundColor = '';
+                    headerSmall.style.color = 'white';
+                    menuTop.style.color = 'white';
+               }
           }
+
+
+          //top of page display
           else {
-               headerSmall.style.top = '92' + '%';
-               headerSmall.style.backgroundColor = '';
                headerSmall.style.color = 'white';
                menuTop.style.color = 'white';
+               fullLogo.style.top = '';
+               fullLogo.style.display = 'none';
+               headerSmall.style.display = '';
+
+               svgIcon.src = 'images/Icon_white.png';
+
+               if (mql.matches) {
+                    headerSmall.style.top = '';
+                    headerSmall.style.backgroundColor = '';
+
+               }
+               else {
+                    headerSmall.style.top = '90' + '%';
+                    headerSmall.style.backgroundColor = '';
+               }
+
+
+
+
           }
      }
 
 
+     //homepage page
 
-
-     //top of page display
      else {
-          headerSmall.style.color = 'white';
-          menuTop.style.color = 'white';
-          fullLogo.style.top = '';
-          fullLogo.style.display = 'flex';
-          headerSmall.style.display = '';
 
-          svgIcon.src = 'images/Icon_white.png';
+          if (document.body.getBoundingClientRect().top <= -50) //  displayed when scrolled
+          {
+               fullLogo.style.display = 'none';
+               svgIcon.src = 'images/Icon_blue.png';
+               headerSmall.style.top = '0' + 'px';
 
-          if (mql.matches) {
-               headerSmall.style.top = '';
-               headerSmall.style.backgroundColor = '';
 
+               if (mql.matches) {
+                    headerSmall.style.top = '0' + 'px';
+                    headerSmall.style.backgroundColor = '#ffffff';
+                    headerSmall.style.color = 'black';
+                    menuTop.style.color = 'black';
+
+
+               }
+               else {
+                    headerSmall.style.top = '92' + '%';
+                    headerSmall.style.backgroundColor = '';
+                    headerSmall.style.color = 'white';
+                    menuTop.style.color = 'white';
+               }
           }
+
+
+
+
+
+          //top of page display
           else {
-               headerSmall.style.top = '90' + '%';
-               headerSmall.style.backgroundColor = '';
+               headerSmall.style.color = 'white';
+               menuTop.style.color = 'white';
+               fullLogo.style.top = '';
+               fullLogo.style.display = 'flex';
+               headerSmall.style.display = '';
+
+               svgIcon.src = 'images/Icon_white.png';
+
+               if (mql.matches) {
+                    headerSmall.style.top = '';
+                    headerSmall.style.backgroundColor = '';
+
+               }
+               else {
+                    headerSmall.style.top = '90' + '%';
+                    headerSmall.style.backgroundColor = '';
+               }
+
+
+
+
           }
-
-
-
-
      }
 }
 
-
-window.onscroll = function () {
-     changeHeader();
-
-};
 
 
 
@@ -237,4 +299,49 @@ links.forEach(link => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+function checkHeight() {
+
+     const elem = document.querySelectorAll('.image-content > img');
+     const dotActive = document.querySelectorAll('.dot');
+
+     // console.log(elem);
+
+     function iterate(item, index) {
+
+
+          if (item.getBoundingClientRect().top <= 0 && item.getBoundingClientRect().bottom >= 0) {
+               console.log(`${item} has index ${index} and ${item.getBoundingClientRect().top}`);
+
+               dotActive[index].classList.add('active');
+
+          }
+          else {
+               console.log('not in view');
+               dotActive[index].classList.remove('active');
+
+          }
+     }
+
+
+     elem.forEach(iterate);
+
+}
+// all on scroll actions
+
+
+window.onscroll = function () {
+     changeHeader();
+     checkHeight();
+
+};
 

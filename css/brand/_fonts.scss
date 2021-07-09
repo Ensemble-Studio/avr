@@ -25,7 +25,9 @@ h1 {
 h2 {
   font-family: 'Saudagar', sans-serif;
   font-size: 80px;
-
+  line-height: 1em;
+  text-transform: uppercase;
+  margin-bottom: 0px;
   @media (min-width: 0px) and (max-width: 640px) {
     font-size: 50px;
   }
