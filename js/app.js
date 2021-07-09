@@ -198,6 +198,7 @@ window.addEventListener('scroll', function () {
                if (position.top <= 0) {
                     section.style.height = '10vh';
                     section.querySelector(".text-block").style.paddingTop = '30vh';
+                    e.currentTarget.blur();
 
                }
 

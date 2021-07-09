@@ -603,8 +603,6 @@ main #collapse02.collapse > .right-50 {
 }
 
 main section.collapse {
-  position: -webkit-sticky;
-  position: sticky;
   top: 0px;
   opacity: 1;
   height: 30%;
