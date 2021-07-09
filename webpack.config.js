@@ -1,7 +1,8 @@
+import css from "/Users/catharina/Creative Cloud Files/ENSEMBLE/DIGITAL/avr/css";
+
+
 module.exports = {
-  output: {
-    publicPath: 'auto',
-  },
+
   module: {
     rules: [
       {
