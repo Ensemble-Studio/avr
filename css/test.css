@@ -1343,6 +1343,7 @@ main#about .about-imagebox {
 }
 
 main#about .about-imagebox img {
-  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=test.css.map */
