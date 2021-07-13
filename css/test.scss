@@ -844,7 +844,7 @@ main#about {
       overflow: hidden;
 
       img {
-        width: 50%; /*actual image width*/
+        width: 100%; /*actual image width*/
         height: auto; /* maintain aspect ratio*/
         margin: auto; /*optional centering of image*/
       }

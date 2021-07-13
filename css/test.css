@@ -1346,7 +1346,7 @@ main#about .about-imagebox {
 }
 
 main#about .about-imagebox img {
-  width: 50%;
+  width: 100%;
   /*actual image width*/
   height: auto;
   /* maintain aspect ratio*/
