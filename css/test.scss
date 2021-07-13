@@ -834,10 +834,10 @@ main#about {
     &-imagebox {
       width: 50%;
       height: 100%;
+
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
+      display: flex;
+      flex-wrap: wrap;
 
       img {
         max-height: 100%;
