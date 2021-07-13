@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap");
 @import url("http://fonts.cdnfonts.com/css/saudagar?styles=56175");
 @font-face {
-  font-family: 'Saudagar Regular';
+  font-family: "Saudagar Regular";
   font-style: normal;
   font-weight: normal;
   src: local("Saudagar Regular"), url("/avr/fonts/saudagar-cufonfonts-webfont/Saudagar.woff") format("woff");
@@ -80,7 +80,7 @@ p2 {
   font-family: "Inter", sans-serif;
   font-size: 14px;
   letter-spacing: 0.02em;
-  font-weight: regular;
+  font-weight: 200;
 }
 
 @media (min-width: 0px) and (max-width: 640px) {
@@ -365,7 +365,7 @@ header#headerSmall #header-phrase {
 
 header#headerSmall #header-phrase span {
   width: 100%;
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1rem;
@@ -441,6 +441,10 @@ header#headerSmall #header-menu ul li {
   margin-left: 30px;
 }
 
+header#headerSmall #header-menu ul li a {
+  font-family: "Inter", sans-serif;
+}
+
 @media (min-width: 0px) and (max-width: 1100px) {
   header#headerSmall #header-menu ul li {
     margin-left: 0px;
@@ -461,6 +465,7 @@ a {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  font-family: "Inter", sans-serif;
 }
 
 .letterspacing {
@@ -1234,6 +1239,8 @@ main#about {
   background-color: #fbf9f6;
   color: black;
   padding-bottom: 5em;
+  height: 100vh;
+  position: absolute;
 }
 
 main#about .about {
@@ -1274,17 +1281,14 @@ main#about .about-textbox {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 50%;
-  height: 100vh;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  padding: 0em 0em 10em 10em;
+  height: 100%;
+  padding: 0em;
 }
 
 @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
@@ -1297,6 +1301,7 @@ main#about .about-textbox {
 }
 
 main#about .about-textbox-content {
+  padding-top: 10em;
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1316,9 +1321,30 @@ main#about .about-textbox-content {
   }
 }
 
+main#about .about-textbox-content .about-logo {
+  margin: 10vh 0;
+}
+
+main#about .about-textbox-content p1,
+main#about .about-textbox-content p2,
+main#about .about-textbox-content p3 {
+  letter-spacing: 0.05em;
+}
+
+main#about .about-textbox-content a.cta {
+  color: black;
+  margin: 50px 0px;
+}
+
+main#about .about-textbox-content p2 {
+  line-height: 1.3em;
+}
+
 main#about .about-textbox-content-quote {
-  width: 90%;
-  padding: 2em;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  margin: 5vh 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1329,21 +1355,73 @@ main#about .about-textbox-content-quote {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main#about .about-textbox-content-quote p1 {
+  padding: 0 8%;
+  margin-bottom: 20px;
+}
+
+main#about .about-textbox-content-quote p3 {
+  text-transform: uppercase;
 }
 
 main#about .about-textbox-content-quote .divider {
   width: 100%;
   height: 0.5px;
   background-color: black;
+  margin: 50px 0px;
+}
+
+main#about .about-textbox-content footer#about {
+  height: 200px;
+  width: 100%;
+  margin-top: 10vh;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main#about .about-textbox-content footer#about div {
+  width: 45%;
+}
+
+@media (min-width: 0px) and (max-width: 640px) {
+  main#about .about-textbox-content footer#about div {
+    width: 40%;
+  }
+}
+
+main#about .about-textbox-content footer#about div a {
+  color: black;
+  height: 1em;
+  margin-bottom: 0.5em;
 }
 
 main#about .about-imagebox {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 50%;
-  height: 100%;
-  background-image: url("https://ensemble-studio.github.io/avr/images/AVR_india_portrait.png");
+  height: 100vh;
+  background-image: url("/images/AVR_india_portrait.png");
   background-size: cover;
+  background-position: center;
 }
 /*# sourceMappingURL=test.css.map */
