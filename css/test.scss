@@ -814,7 +814,7 @@ main#about {
         width: 80%;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
           width: 90%;
         }
