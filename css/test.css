@@ -152,7 +152,7 @@ a.cta--menu:hover {
 }
 
 @font-face {
-  font-family: 'Saudagar Regular';
+  font-family: "Saudagar Regular";
   font-style: normal;
   font-weight: normal;
   src: local("Saudagar Regular"), url("/fonts/saudagar-cufonfonts-webfont/Saudagar.woff") format("woff");
@@ -166,7 +166,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 body#front-page {
@@ -658,7 +658,7 @@ main section.collapse .text-block .addArrow a:after {
   /* Prevent underline of arrow */
   padding-left: 2px;
   /* Add a little space between text and arrow */
-  content: '\00bb';
+  content: "\00bb";
   /* Unicode hex for &raquo; */
 }
 
@@ -1114,6 +1114,20 @@ main#design .designs-textbox-content {
   }
 }
 
+main#design .designs-textbox-content-quote {
+  width: 90%;
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main#design .designs-textbox-content-quote .divider {
+  background-color: black;
+  height: 0.5px;
+  width: 100%;
+}
+
 main#design .designs-textbox .list {
   width: 100%;
   margin-top: 2em;
@@ -1214,5 +1228,117 @@ main#design section.designs:nth-child(odd) {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
+}
+
+main#about {
+  background-color: #fbf9f6;
+  color: black;
+  padding-bottom: 5em;
+}
+
+main#about .about {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: #010118;
+}
+
+@media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+  main#about .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+main#about .about-textbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 50%;
+  height: 100vh;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  padding: 0em 0em 10em 10em;
+}
+
+@media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+  main#about .about-textbox {
+    width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+main#about .about-textbox-content {
+  width: 80%;
+}
+
+@media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+  main#about .about-textbox-content {
+    width: 90%;
+  }
+}
+
+main#about .about-textbox-content-quote {
+  width: 90%;
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main#about .about-textbox-content-quote .divider {
+  width: 100%;
+  height: 0.5px;
+  background-color: black;
+}
+
+main#about .about-imagebox {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main#about .about-imagebox img {
+  width: 100%;
 }
 /*# sourceMappingURL=test.css.map */
