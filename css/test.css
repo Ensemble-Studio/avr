@@ -1251,7 +1251,7 @@ main#about .about {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  background-color: #010118;
+  background-color: #fbf9f6;
 }
 
 @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
