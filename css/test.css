@@ -1323,6 +1323,7 @@ main#about .about-textbox-content {
 
 main#about .about-textbox-content .about-logo {
   margin: 10vh 0;
+  width: 60%;
 }
 
 @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
