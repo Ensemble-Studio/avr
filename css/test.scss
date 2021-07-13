@@ -791,7 +791,7 @@ main#about {
     background-color: $cream;
 
     @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
-      flex-direction: column-reverse;
+      flex-direction: column;
     }
 
     &-textbox {
@@ -812,11 +812,15 @@ main#about {
 
       &-content {
         @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
-          width: 90%;
+          width: 70%;
         }
 
         .about-logo {
           margin: 10vh 0;
+
+          @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+            margin: 5vh 0;
+          }
         }
 
         p1,
@@ -895,6 +899,12 @@ main#about {
     }
 
     &-imagebox {
+      @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+        width: 100%;
+        height: 50vh;
+        position: relative;
+      }
+
       position: sticky;
       position: -webkit-sticky;
       top: 0;

@@ -1264,9 +1264,9 @@ main#about .about {
 @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
   main#about .about {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -1317,12 +1317,18 @@ main#about .about-textbox-content {
 
 @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
   main#about .about-textbox-content {
-    width: 90%;
+    width: 70%;
   }
 }
 
 main#about .about-textbox-content .about-logo {
   margin: 10vh 0;
+}
+
+@media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+  main#about .about-textbox-content .about-logo {
+    margin: 5vh 0;
+  }
 }
 
 main#about .about-textbox-content p1,
@@ -1423,5 +1429,13 @@ main#about .about-imagebox {
   background-image: url("/images/AVR_india_portrait.png");
   background-size: cover;
   background-position: center;
+}
+
+@media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+  main#about .about-imagebox {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+  }
 }
 /*# sourceMappingURL=test.css.map */
