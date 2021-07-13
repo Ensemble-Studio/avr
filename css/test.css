@@ -1343,21 +1343,7 @@ main#about .about-textbox-content-quote .divider {
 main#about .about-imagebox {
   width: 50%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  overflow: hidden;
-}
-
-main#about .about-imagebox img {
-  width: 100%;
-  /*actual image width*/
-  height: auto;
-  /* maintain aspect ratio*/
-  margin: auto;
-  /*optional centering of image*/
+  background-image: url("https://ensemble-studio.github.io/avr/images/AVR_india_portrait.png");
+  background-size: cover;
 }
 /*# sourceMappingURL=test.css.map */

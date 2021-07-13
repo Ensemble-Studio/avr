@@ -839,17 +839,8 @@ main#about {
     &-imagebox {
       width: 50%;
       height: 100%;
-
-      display: flex;
-      display: flex;
-      flex-wrap: wrap;
-      overflow: hidden;
-
-      img {
-        width: 100%; /*actual image width*/
-        height: auto; /* maintain aspect ratio*/
-        margin: auto; /*optional centering of image*/
-      }
+      background-image: url("https://ensemble-studio.github.io/avr/images/AVR_india_portrait.png");
+      background-size: cover;
     }
   }
 }
