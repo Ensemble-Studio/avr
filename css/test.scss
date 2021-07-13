@@ -820,6 +820,7 @@ main#about {
           width: 90%;
           padding: 2em;
           display: flex;
+          flex-direction: column;
 
           .divider {
             width: 100%;
@@ -839,7 +840,7 @@ main#about {
       align-items: flex-start;
 
       img {
-        width: 100%;
+        height: 100%;
       }
     }
   }
