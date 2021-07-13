@@ -1298,6 +1298,15 @@ main#about .about-textbox {
 
 main#about .about-textbox-content {
   width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
