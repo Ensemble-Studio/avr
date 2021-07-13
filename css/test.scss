@@ -787,7 +787,7 @@ main#about {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     background-color: $cream;
 
     @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
