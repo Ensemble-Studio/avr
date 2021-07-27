@@ -70,36 +70,24 @@ if (window.location.href.indexOf('about') > -1) {
 
      }
 
+}
 
 
-     // //top of page display
+//process page
+if (window.location.href.indexOf('process') > -1) {
 
-     // headerSmall.style.color = 'white';
-     // menuTop.style.color = 'white';
-     // fullLogo.style.top = '';
-     // fullLogo.style.display = 'none';
-     // headerSmall.style.display = '';
+     fullLogo.style.display = 'none';
+     svgIcon.src = 'images/Icon_blue.png';
+     headerSmall.style.backgroundColor = '';
+     headerSmall.style.color = 'black';
+     menuTop.style.color = 'black';
 
-     // svgIcon.src = 'images/Icon_white.png';
-
-     // if (mql.matches) {
-     //      headerSmall.style.top = '';
-     //      headerSmall.style.backgroundColor = '';
-
-     // }
-     // else {
-     //      headerSmall.style.top = '90' + '%';
-     //      headerSmall.style.backgroundColor = '';
-     //      fullLogo.style.display = 'none';
-
-     // }
 
 
 
 
 
 }
-
 // function for header change on scroll
 
 function changeHeader() {
@@ -204,6 +192,66 @@ function changeHeader() {
                headerSmall.style.display = '';
 
                svgIcon.src = 'images/Icon_white.png';
+
+               if (mql.matches) {
+                    headerSmall.style.top = '';
+                    headerSmall.style.backgroundColor = '';
+
+               }
+               else {
+                    headerSmall.style.top = '90' + '%';
+                    headerSmall.style.backgroundColor = '';
+               }
+
+
+
+
+          }
+     }
+
+     //process page
+
+     else if (window.location.href.indexOf('process') > -1) {
+
+          if (document.body.getBoundingClientRect().top <= -50) //  displayed when scrolled
+          {
+               fullLogo.style.display = 'none';
+               svgIcon.src = 'images/Icon_blue.png';
+               headerSmall.style.top = '0' + 'px';
+
+
+               if (mql.matches) {
+                    headerSmall.style.top = '0' + 'px';
+                    headerSmall.style.backgroundColor = '#ffffff';
+                    headerSmall.style.color = 'black';
+                    menuTop.style.color = 'black';
+                    fullLogo.style.display = 'none';
+
+
+
+               }
+               else {
+                    headerSmall.style.top = '92' + '%';
+                    headerSmall.style.backgroundColor = '';
+                    headerSmall.style.color = 'white';
+                    menuTop.style.color = 'white';
+
+               }
+          }
+
+
+
+
+
+          //top of page display
+          else {
+               headerSmall.style.color = 'black';
+               menuTop.style.color = 'black';
+               fullLogo.style.top = '';
+               fullLogo.style.display = 'none';
+               headerSmall.style.display = '';
+
+               svgIcon.src = 'images/Icon_blue.png';
 
                if (mql.matches) {
                     headerSmall.style.top = '';
