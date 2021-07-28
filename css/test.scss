@@ -946,12 +946,12 @@ main#process {
       align-items: center;
       justify-content: center;
     }
-    border: 1px solid red;
+    // border: 1px solid red;
     display: flex;
     flex-direction: row;
 
     align-items: flex-end;
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: auto;
     width: 80vw;
     margin-bottom: 10%;
@@ -964,7 +964,7 @@ main#process {
     }
     figure.large {
       order: 0;
-      width: 40vw;
+      width: 35vw;
 
       @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
         width: 100%;
@@ -977,31 +977,66 @@ main#process {
       }
     }
 
-    .text-content.large:nth-child(even) {
-      order: 0;
-      @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
-        order: 1;
-      }
-    }
     .text-content.large {
       order: 1;
-      border: 1px solid red;
-      width: 30vw;
+      // border: 1px solid red;
+      width: 35vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
 
       @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
         width: 100%;
       }
+      span.number {
+        h1 {
+          font-size: 10vw;
+          margin-bottom: -0.4em;
 
-      h1 {
-        line-height: 10%;
+          @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+            font-size: 10vh;
+          }
+        }
+      }
+      h2 {
+        font-size: 5vw;
+        margin-bottom: 1vw;
+        @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+          font-size: 5vh;
+        }
+      }
+
+      .copy {
+        width: 30vw;
+        p2 {
+          font-size: 2em;
+          line-height: 1.5em;
+        }
+      }
+    }
+
+    .text-content.large:nth-child(odd) {
+      align-items: flex-end;
+
+      text-align: end;
+    }
+    .text-content.large:nth-child(odd) {
+      order: 0;
+      @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+        order: 1;
       }
     }
   }
 
   section.banner {
     width: 100%;
-    height: 600px;
+    height: 800px;
     margin-bottom: 10%;
+
+    @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+      height: 50vh;
+    }
 
     img {
       width: 100%;
