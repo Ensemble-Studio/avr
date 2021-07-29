@@ -241,8 +241,8 @@ function changeHeader() {
 
           //top of page display
           else {
-               headerSmall.style.color = 'white';
-               menuTop.style.color = 'white';
+               headerSmall.style.color = 'black';
+               menuTop.style.color = 'black';
                fullLogo.style.top = '';
                fullLogo.style.display = 'none';
                headerSmall.style.display = '';
