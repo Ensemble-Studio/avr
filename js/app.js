@@ -1,7 +1,3 @@
-
-
-
-
 // document elements
 const headerSmall = document.getElementById('headerSmall');
 const logoBig = document.getElementById('fullLogo');
@@ -245,8 +241,8 @@ function changeHeader() {
 
           //top of page display
           else {
-               headerSmall.style.color = 'black';
-               menuTop.style.color = 'black';
+               headerSmall.style.color = 'white';
+               menuTop.style.color = 'white';
                fullLogo.style.top = '';
                fullLogo.style.display = 'none';
                headerSmall.style.display = '';
@@ -259,7 +255,7 @@ function changeHeader() {
 
                }
                else {
-                    headerSmall.style.top = '90' + '%';
+                    headerSmall.style.top = '92' + '%';
                     headerSmall.style.backgroundColor = '';
                }
 

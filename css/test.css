@@ -99,6 +99,7 @@ p2 {
   line-height: 100%;
   font-size: 18px;
   height: 18px;
+  text-underline-offset: 0.8em;
 }
 
 @media (min-width: 0px) and (max-width: 640px) {
@@ -1231,6 +1232,10 @@ main#about .about {
   background-color: #fbf9f6;
 }
 
+main#about .about p2 {
+  font-size: 2rem;
+}
+
 @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
   main#about .about {
     -webkit-box-orient: vertical;
@@ -1258,7 +1263,7 @@ main#about .about-textbox {
           box-sizing: border-box;
   width: 50%;
   height: 100%;
-  padding: 0em;
+  padding: 10em;
 }
 
 @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
@@ -1267,11 +1272,12 @@ main#about .about-textbox {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    padding: 0em;
   }
 }
 
 main#about .about-textbox-content {
-  padding-top: 10em;
+  padding-top: 5em;
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1291,6 +1297,7 @@ main#about .about-textbox-content {
 @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
   main#about .about-textbox-content {
     width: 70%;
+    padding-top: 0em;
   }
 }
 
@@ -1301,7 +1308,7 @@ main#about .about-textbox-content .about-logo {
 
 @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
   main#about .about-textbox-content .about-logo {
-    margin: 5vh 0;
+    margin: 10vh 0;
   }
 }
 
@@ -1340,6 +1347,12 @@ main#about .about-textbox-content-quote {
           align-items: center;
 }
 
+@media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+  main#about .about-textbox-content-quote {
+    margin: 0;
+  }
+}
+
 main#about .about-textbox-content-quote p1 {
   padding: 0 8%;
   margin-bottom: 20px;
@@ -1368,9 +1381,9 @@ main#about .about-textbox-content footer#about {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -1389,7 +1402,8 @@ main#about .about-textbox-content footer#about div {
 main#about .about-textbox-content footer#about div a {
   color: black;
   height: 1em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
+  text-underline-offset: 0.4em;
 }
 
 main#about .about-imagebox {
@@ -1446,6 +1460,15 @@ main#process section.intro {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+  main#process section.intro {
+    width: 100%;
+    padding: 10%;
+  }
 }
 
 main#process section.intro span.titletext {
@@ -1457,15 +1480,33 @@ main#process section.intro span.titletext h1 {
   line-height: 1em;
 }
 
+@media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+  main#process section.intro span.titletext h1 {
+    font-size: 7vh;
+  }
+}
+
 main#process section.intro span.titletext h1.start {
   text-align: start;
   margin: 0;
+}
+
+@media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+  main#process section.intro span.titletext h1.start {
+    text-align: center;
+  }
 }
 
 main#process section.intro span.titletext h1.end {
   text-align: end;
   margin: 0;
   font-style: italic;
+}
+
+@media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+  main#process section.intro span.titletext h1.end {
+    text-align: center;
+  }
 }
 
 main#process section.intro span.introtext a {
@@ -1477,8 +1518,10 @@ main#process section.intro span.introtext p1 {
   font-size: 3rem;
 }
 
-main#process section.intro span.introtext p2 {
-  font-size: 2rem;
+@media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+  main#process section.intro span.introtext p1 {
+    font-size: 2rem;
+  }
 }
 
 main#process .darkBg {
@@ -1487,7 +1530,7 @@ main#process .darkBg {
   color: white;
 }
 
-main#process section.text {
+main#process section.processText {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1509,7 +1552,7 @@ main#process section.text {
 }
 
 @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
-  main#process section.text {
+  main#process section.processText {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1520,27 +1563,30 @@ main#process section.text {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-}
-
-main#process section.text figure.large {
-  width: 35vw;
-}
-
-@media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
-  main#process section.text figure.large {
     width: 100%;
   }
 }
 
-main#process section.text figure.large img {
+main#process section.processText figure.large {
+  width: 35vw;
+}
+
+@media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+  main#process section.processText figure.large {
+    width: 60%;
+  }
+}
+
+main#process section.processText figure.large img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-main#process section.text .text-content.large {
+main#process section.processText .text-content.large {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 35vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1559,38 +1605,45 @@ main#process section.text .text-content.large {
 }
 
 @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
-  main#process section.text .text-content.large {
+  main#process section.processText .text-content.large {
     width: 100%;
+    padding: 10%;
   }
 }
 
-main#process section.text .text-content.large span.number h1 {
+main#process section.processText .text-content.large span.number h1 {
   font-size: 10vw;
   margin-bottom: -0.4em;
 }
 
 @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
-  main#process section.text .text-content.large span.number h1 {
+  main#process section.processText .text-content.large span.number h1 {
     font-size: 10vh;
   }
 }
 
-main#process section.text .text-content.large h2 {
+main#process section.processText .text-content.large h2 {
   font-size: 5vw;
   margin-bottom: 1vw;
 }
 
 @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
-  main#process section.text .text-content.large h2 {
+  main#process section.processText .text-content.large h2 {
     font-size: 5vh;
   }
 }
 
-main#process section.text .text-content.large .copy {
+main#process section.processText .text-content.large .copy {
   width: 30vw;
 }
 
-main#process section.text .text-content.large .copy p2 {
+@media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+  main#process section.processText .text-content.large .copy {
+    width: 100%;
+  }
+}
+
+main#process section.processText .text-content.large .copy p2 {
   font-size: 2em;
   line-height: 1.5em;
 }
@@ -1616,7 +1669,7 @@ main#process section.banner img {
 footer {
   height: 400px;
   width: 80%;
-  padding: 10% 0;
+  padding: 20% 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
