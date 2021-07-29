@@ -1020,6 +1020,12 @@ main#design {
   padding-bottom: 5em;
 }
 
+@media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+  main#design {
+    padding: 10em 0;
+  }
+}
+
 main#design .designs {
   width: 100%;
   display: -webkit-box;
@@ -1044,6 +1050,9 @@ main#design .designs {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -1077,6 +1086,10 @@ main#design .designs-textbox {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0%;
   }
 }
 
@@ -1086,7 +1099,7 @@ main#design .designs-textbox-content {
 
 @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
   main#design .designs-textbox-content {
-    width: 90%;
+    width: 70%;
   }
 }
 
@@ -1175,7 +1188,7 @@ main#design .designs-imagebox {
 
 @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
   main#design .designs-imagebox {
-    width: 100%;
+    width: 80%;
     height: 100%;
   }
   main#design .designs-imagebox > img:nth-child(1) {

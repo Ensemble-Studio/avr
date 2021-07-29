@@ -625,6 +625,10 @@ main#design {
   color: white;
   padding-bottom: 5em;
 
+  @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+    padding: 10em 0;
+  }
+
   .designs {
     // overflow-x: hidden;
 
@@ -637,12 +641,15 @@ main#design {
 
     @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
       flex-direction: column-reverse;
+      align-items: center;
     }
 
     &-textbox {
       @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
         width: 100%;
         justify-content: flex-start;
+        align-items: center;
+        padding: 0%;
       }
 
       display: flex;
@@ -663,7 +670,7 @@ main#design {
       &-content {
         width: 80%;
         @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
-          width: 90%;
+          width: 70%;
         }
 
         &-quote {
@@ -727,7 +734,7 @@ main#design {
           display: none;
         }
 
-        width: 100%;
+        width: 80%;
         height: 100%;
       }
 
