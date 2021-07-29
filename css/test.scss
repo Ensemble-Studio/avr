@@ -1087,11 +1087,11 @@ main#process {
 
 footer {
   height: 400px;
-  width: 80%;
+  width: 100%;
   padding: 20% 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
   box-sizing: border-box;
 
@@ -1103,6 +1103,32 @@ footer {
 
     a {
       color: black;
+      height: 1em;
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+footer#design {
+  height: 400px;
+  width: 100%;
+  padding: 20% 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  box-sizing: border-box;
+  background-color: $primary-blue;
+  color: white;
+
+  div {
+    width: 40%;
+    @media (min-width: 0px) and (max-width: 640px) {
+      width: 40%;
+    }
+
+    a {
+      color: white;
       height: 1em;
       margin-bottom: 0.5em;
     }
