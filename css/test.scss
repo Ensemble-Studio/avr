@@ -465,23 +465,6 @@ main {
   }
 }
 
-#progress {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 100;
-
-  ul {
-    display: flex;
-    flex-direction: row;
-
-    li {
-      list-style: none;
-      margin-right: 2rem;
-    }
-  }
-}
-
 #footer {
   height: 5%;
   bottom: 0;
@@ -1081,6 +1064,63 @@ main#process {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+}
+
+#progressBar {
+  position: fixed;
+  width: 100%;
+  top: 40vh;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #967586;
+  transition: 800ms;
+  @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+    // left: 0;
+    left: 95%;
+    top: 0;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+      flex-direction: row;
+      transform: rotate(90deg);
+      transform-origin: left center;
+
+      width: 70vh;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    li {
+      text-transform: uppercase;
+      list-style: none;
+      font-size: 1.5rem;
+      letter-spacing: 0.2rem;
+      margin-bottom: 2em;
+      transition: 200ms;
+
+      @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+        font-size: 0.8rem;
+      }
+    }
+
+    .selected {
+      font-size: 2rem;
+      line-height: 1.5rem;
+      margin-left: 1rem;
+
+      @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+        font-size: 1.2rem;
+        line-height: 1rem;
+        margin-left: 1rem;
+      }
     }
   }
 }

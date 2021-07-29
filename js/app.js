@@ -14,6 +14,7 @@ const aboutBlurbText = document.getElementsByClassName('textbox');
 const titleFont = document.querySelector(".title");
 const footerHeight = document.getElementById('footer');
 const aboutBlurb = document.getElementById('aboutblurb');
+const footerDoc = document.querySelector('footer');
 
 
 // scroll height is the top of page
@@ -75,13 +76,24 @@ if (window.location.href.indexOf('process') > -1) {
      fullLogo.style.display = 'none';
      svgIcon.src = 'images/Icon_blue.png';
      headerSmall.style.backgroundColor = '';
-     headerSmall.style.color = 'black';
-     menuTop.style.color = 'black';
+
+     if (mql.matches) {
+          headerSmall.style.top = '';
+          headerSmall.style.backgroundColor = '';
+          headerSmall.style.color = 'black';
+          menuTop.style.color = 'black';
+          fullLogo.style.display = 'none';
 
 
 
+     }
+     else {
+          headerSmall.style.top = '92' + '%';
+          headerSmall.style.backgroundColor = '';
+          headerSmall.style.color = 'white';
+          menuTop.style.color = 'white';
 
-
+     }
 
 }
 // function for header change on scroll
@@ -246,6 +258,8 @@ function changeHeader() {
                fullLogo.style.top = '';
                fullLogo.style.display = 'none';
                headerSmall.style.display = '';
+               headerSmall.style.top = '';
+
 
                svgIcon.src = 'images/Icon_blue.png';
 
@@ -431,14 +445,7 @@ function checkHeight() {
      elem.forEach(iterate);
 
 }
-// all on scroll actions
 
-
-window.onscroll = function () {
-     changeHeader();
-     checkHeight();
-
-};
 
 
 
@@ -448,3 +455,106 @@ document.onload = function () {
      var url = window.location.href;
      console.log(url);
 }
+
+
+
+
+
+
+
+
+
+//progress bar
+
+const pBar = document.getElementById("progressBar");
+
+
+//steps and list items
+
+//consult
+const sOne = document.getElementById("stepOne");
+
+//sourcing
+const sTwo = document.getElementById("stepTwo");
+
+//design
+const sThree = document.getElementById("stepThree");
+
+//atelier
+const sFour = document.getElementById("stepFour");
+
+//delivery
+const sFive = document.getElementById("stepFive");
+
+
+
+//process sections
+
+const proSecOne = document.getElementById("consult");
+const proSecTwo = document.getElementById("sourcing");
+const proSecThree = document.getElementById("design");
+const proSecFour = document.getElementById("atelier");
+const proSecFive = document.getElementById("delivery");
+const proSecSix = document.getElementById("fine");
+
+
+
+
+//add selected class when it scrolls 
+
+// var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+//      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+
+
+window.onscroll = function () {
+
+     changeHeader();
+     checkHeight();
+
+     if (proSecOne.getBoundingClientRect().top < 0 && proSecOne.getBoundingClientRect().bottom > 0) {
+          sOne.classList.add("selected");
+
+     }
+
+     else if (proSecTwo.getBoundingClientRect().top < 0 && proSecTwo.getBoundingClientRect().bottom > 0) {
+          sTwo.classList.add("selected");
+     }
+
+
+
+
+     else if (proSecThree.getBoundingClientRect().top < 0 && proSecThree.getBoundingClientRect().bottom > 0) {
+          sThree.classList.add("selected");
+     }
+
+     else if (proSecFour.getBoundingClientRect().top < 0 && proSecFour.getBoundingClientRect().bottom > 0) {
+          sFour.classList.add("selected");
+     }
+     else if (proSecFive.getBoundingClientRect().top < 0 && proSecFive.getBoundingClientRect().bottom > 0) {
+          sFive.classList.add("selected");
+     }
+
+     else if (proSecSix.getBoundingClientRect().top < 0 && proSecSix.getBoundingClientRect().bottom > 0) {
+          pBar.style.opacity = '0';
+
+
+
+     }
+
+
+     else {
+          sOne.classList.remove("selected");
+          sTwo.classList.remove("selected");
+          sThree.classList.remove("selected");
+          sFour.classList.remove("selected");
+          sFive.classList.remove("selected");
+          pBar.style.opacity = '1';
+
+
+     }
+
+
+
+
+};

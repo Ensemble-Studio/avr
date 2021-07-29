@@ -797,28 +797,6 @@ main section.collapse .text-block {
   }
 }
 
-#progress {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 100;
-}
-
-#progress ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-#progress ul li {
-  list-style: none;
-  margin-right: 2rem;
-}
-
 #footer {
   height: 5%;
   bottom: 0;
@@ -1677,6 +1655,93 @@ main#process section.banner img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+#progressBar {
+  position: fixed;
+  width: 100%;
+  top: 40vh;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: #967586;
+  -webkit-transition: 800ms;
+  transition: 800ms;
+}
+
+@media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+  #progressBar {
+    left: 95%;
+    top: 0;
+  }
+}
+
+#progressBar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+  #progressBar ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-transform-origin: left center;
+            transform-origin: left center;
+    width: 70vh;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+#progressBar ul li {
+  text-transform: uppercase;
+  list-style: none;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 2em;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+@media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+  #progressBar ul li {
+    font-size: 0.8rem;
+  }
+}
+
+#progressBar ul .selected {
+  font-size: 2rem;
+  line-height: 1.5rem;
+  margin-left: 1rem;
+}
+
+@media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
+  #progressBar ul .selected {
+    font-size: 1.2rem;
+    line-height: 1rem;
+    margin-left: 1rem;
+  }
 }
 
 footer {
