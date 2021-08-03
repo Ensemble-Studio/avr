@@ -267,6 +267,11 @@ main {
       padding: 4%;
     }
 
+    @media (min-width: 0px) and (max-width: 1100px) and (orientation: portrait) {
+      height: 80vh;
+
+      padding-bottom: 20%;
+    }
     .usp {
       width: auto;
       height: auto;

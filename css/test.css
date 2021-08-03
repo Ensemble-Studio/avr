@@ -516,6 +516,13 @@ main .topbanner {
   }
 }
 
+@media (min-width: 0px) and (max-width: 1100px) and (orientation: portrait) {
+  main .topbanner {
+    height: 80vh;
+    padding-bottom: 20%;
+  }
+}
+
 main .topbanner .usp {
   width: auto;
   height: auto;
