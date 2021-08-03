@@ -173,7 +173,7 @@ function changeHeader() {
 
      //homepage page
 
-     else if (window.location.href.indexOf('index') > -1) {
+     else if (window.location.href.indexOf('') > -1) {
 
           if (document.body.getBoundingClientRect().top <= -50) //  displayed when scrolled
           {
