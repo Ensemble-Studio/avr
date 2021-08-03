@@ -173,7 +173,7 @@ function changeHeader() {
 
      //homepage page
 
-     else if (window.location.href.indexOf('') > -1) {
+     else if (window.location.href === "https://www.alexandravanrijckevorsel.com/") {
 
           if (document.body.getBoundingClientRect().top <= -50) //  displayed when scrolled
           {
