@@ -96,7 +96,18 @@ if (window.location.href.indexOf('process') > -1) {
      }
 
 }
-// function for header change on scroll
+
+//process page
+if (window.location.href.indexOf('design') > -1) {
+
+     fullLogo.style.display = 'none';
+
+
+
+
+}
+
+//function for header change on scroll
 
 function changeHeader() {
 
