@@ -40,7 +40,7 @@ else {
 }
 
 
-// different headeron load
+// different header on load
 
 //about page
 if (window.location.href.indexOf('about') > -1) {
@@ -101,6 +101,7 @@ if (window.location.href.indexOf('process') > -1) {
 if (window.location.href.indexOf('design') > -1) {
 
      fullLogo.style.display = 'none';
+
 
 
 
@@ -218,7 +219,7 @@ function changeHeader() {
 
                }
                else {
-                    headerSmall.style.top = '90' + '%';
+                    headerSmall.style.top = '92' + '%';
                     headerSmall.style.backgroundColor = '';
                }
 
