@@ -85,7 +85,7 @@ p2 {
 
 @media (min-width: 0px) and (max-width: 640px) {
   p2 {
-    font-size: 9px;
+    font-size: 14px;
   }
 }
 
@@ -1075,9 +1075,19 @@ main#design .designs-textbox-content {
   width: 80%;
 }
 
+main#design .designs-textbox-content h2 {
+  font-size: 5vw;
+}
+
 @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait) {
   main#design .designs-textbox-content {
     width: 70%;
+  }
+  main#design .designs-textbox-content h2 {
+    font-size: 5vh;
+  }
+  main#design .designs-textbox-content p2 {
+    font-size: 14px;
   }
 }
 
