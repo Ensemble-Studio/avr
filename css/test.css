@@ -1380,6 +1380,12 @@ main#about .about-textbox-content footer#about {
           align-items: flex-start;
 }
 
+@media (min-width: 0px) and (max-width: 640px) {
+  main#about .about-textbox-content footer#about {
+    margin-bottom: 10vh;
+  }
+}
+
 main#about .about-textbox-content footer#about div {
   width: 45%;
 }
