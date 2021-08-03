@@ -1,0 +1,20 @@
+<html>
+
+<head>
+
+<title> Redicting to HTTPS
+
+</title>
+
+</head>
+
+<script Language=JavaScript>
+
+RewriteEngine On
+
+RewriteCond %{HTTPS} !=on
+
+RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
+</script>
+</html>
