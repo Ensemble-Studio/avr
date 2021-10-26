@@ -311,7 +311,7 @@ window.addEventListener('scroll', function () {
                // checking whether section top meets top window
                // max width 800px and landscape orientation
                if (position.top <= 0) {
-                    section.style.height = '10vh';
+                    section.style.height = '120vh';
                     section.querySelector(".text-block").style.paddingTop = '30vh';
                     e.currentTarget.blur();
 
@@ -319,7 +319,7 @@ window.addEventListener('scroll', function () {
 
                // checking whether section bottom meets top window
                else if (position.top >= 0) {
-                    section.style.height = '';
+                    section.style.height = '120vh';
                     section.querySelector(".text-block").style.paddingTop = '';
 
 
